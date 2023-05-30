@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Example styles */
+    p {
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+    }
+    
+    strong {
+      font-weight: bold;
+      color: #ff7200;
+    }
+    .contact {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("img/galaxy.jpg");;
+    }
+
+    .contact-image {
+      height: 100vh;
+      width: 50vw; /* Adjust the width as needed */
+      margin-right: 20px;
+    }
+
+    .contact-details {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; 
+    }
+    .contact-details h1{
+        text-align: center;
+        width: 100%;
+
+    }
+    .contact-details .body{
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        align-items: flex-start;
+    }
+    .contact h2 {
+      flex-grow: 1;
+      font-size: 50px;
+      margin-bottom: 10px;
+      padding-bottom: 10rem;
+      color: #ff7200;
+    }
+
+    .contact p {
+      flex-grow: 1;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .contact .email {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .contact .phone {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <img src="img/phone1.webp" alt="Contact Information" class="contact-image">
+    <div class="contact-details">
+      <h2>Contact Information</h2>
+     <div class="body">
+        <p><strong>Full Name: </strong><span class="fullname">Mirta Akins</span></p>
+        <p><strong>Email: </strong><a href="mailto:example1@example.com" class="email">mirtaakins3@gmail.com</a></p>
+        <p><strong>Phone: </strong><span class="phone">0783445076</span></p>
+        <p><strong>Based in: </strong><span class="basedin">Kigali-Nyarugenge</span></p>
+     </div>
+    </div>
+  </div>
+
+  
+  <!-- Add more contact divs as needed -->
+
+  <!-- Rest of your website content goes here -->
+</body>
+</html>

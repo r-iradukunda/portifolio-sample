@@ -1,0 +1,1346 @@
+*{
+    background: #2a2c39;
+    
+    font-family: "Cormorant Garamond",serif;
+    color: white;
+    }
+::selection {
+    background-color: #0dfd21;
+    color: orange;}
+
+@media all and (min-width: 1000px){
+.small-screens{display: none;}
+body {width: 100vw;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #2a2c39;
+    }
+.main-wrapper {margin: 0 auto 0 auto;          /* THIS IS BIG BOX CONTAINING ALL NOTES*/
+                box-sizing: border-box;
+                width: auto;
+                background: #2a2c39;   
+                padding: auto;
+                }
+
+.colkress {top: 0;
+    display: flex;
+    box-sizing: border-box;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 999999;
+        }
+.colkress::after {display: block;
+            content: '';
+            clear: both;}
+        
+                  
+
+.colkress ul{list-style-type: none;
+        width: 100%;
+        left: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;                                           /* !!!!!!!!!!!!!!navbar ul is magined right*/
+        justify-content: center;                        
+        }
+    
+.colkress > ul > li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               flex-grow: 1;
+               flex-shrink: 2;
+               width: 100%;
+                position: relative;
+                margin-top: 40px;}
+
+
+                                        /*then now am gonna handle on the """a"""" navbar main*/
+
+ .colkress > ul > li > a{opacity: 0.5;
+                        padding: 30px;
+                    font-size: 1.8em;
+                    flex-grow: 1;
+                    flex-shrink: 3;
+                    text-align: center;}
+
+                                            /*ABOUT LOGO ::::::::::::::::::::::::*/
+.colkress .btnbox .btnlogoo{opacity: 1 !important;
+                             margin-right: 90px; 
+                             margin-left: 10%;      
+                            flex-grow: 2;
+                            float: left;}
+
+.colkress > ul > li:hover > a.btnlogoo {background: none;
+                            }
+
+ .colkress > ul > li:hover > a{opacity: 1;
+                                
+                        background: url(img/my-web-navbar-hover.JPG) no-repeat;
+                        background-position: center;
+                    }
+
+
+.colkress ul li a{display: block;
+            color: white;
+            width: 100%;
+            padding: 10px 10px;
+            font-size: 1.2em;
+            text-decoration: none;}
+ 
+                                                        /*in combination with::::::::::: SUBMENU::::::*/
+.colkress ul .submenu{display: flex;
+                position: absolute;
+                z-index: 10;
+            left: 0;
+            top: 100%;
+            transition: display 1s ease-in-out;
+            animation: move 1s alternate;
+            background: #30313d;
+            display: none;
+            }
+
+@keyframes move{
+    0%{transform: translateY(-10%);}
+    100%{transform: translateY(0%);}
+
+                    }
+
+.colkress ul .submenu li a{
+                            text-align: left !important;
+                            background: #30313d;
+                        }
+
+ .colkress ul .submenu li{min-width: 230px;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        background: #2a2c39 !important;
+                        margin-left: 0 !important;}
+
+ .colkress ul li:hover .submenu{display: block;
+                                left: 0;}
+
+.colkress ul .submenu li:hover a{color: black;
+                         background: #fff;
+                          animation: animate 1s forwards; }
+@keyframes animate{ 
+    0%{
+        transform: translate(-20%);
+    }
+    100%{
+    transform: translate(5px);}
+    
+}
+
+                            /*finisages*/
+
+    
+                                      /*hire me button*/
+
+.colkress ul > li a.btnk {
+            display: flex;
+            flex-grow: 0;
+            margin-left: 90px;
+            margin-right: 90px;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            width: 180px;
+            height: 60px;
+            text-align: center;
+            opacity: 1;
+            color: white;
+            padding: 5px;
+            border-radius: 40px;
+            border: 1px solid rgb(101, 103, 104);
+        }
+        .fa-angle-double-right{margin-left: 10px;
+                                background: none;}
+
+        .colkress > ul > li:hover .btnk{
+            transition: all 0.7s ease;
+            background: rgba(100, 99, 99, 0.3);
+            border: 1px solid rgba(100, 99, 99, 0.3);
+        }
+        
+
+
+        /* HELLO CONTENT::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.hero-section{display: flex;
+            background: #2a2c39;
+            margin: 5vh 5vw 0 7vw;
+            box-sizing: border-box;
+            width: 100vw;}
+
+
+.hero-wrapper{display: flex;
+            box-sizing: border-box;
+            width: 100%;
+            flex: 1 1 100%;                    /*the biggest flex container!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+            flex-flow: row nowrap;
+            margin-top: 160px;
+       }
+
+.hero-content{display: flex;
+            flex-shrink: 2;                              /*sub container1, it's gonna be both flex container and item*/
+            flex-flow: column nowrap;
+            justify-content: left;
+            margin-top: -5vh;
+            }
+                                              
+.hero-content h3{font-size: 3em;
+                flex-shrink: 2;
+                margin-top: 4vh;}
+
+.hero-content h2{font-size: 4.5em;
+                flex-shrink: 2;
+                display: flex;
+                position: absolute;
+                margin-top: 15vh;}
+
+.shape-mark{margin-left: 2%;}
+
+.shape-mark::after {content: 'aaaaa';
+                    font-size: 0.8em;
+                    position: absolute;
+                    left: 3.6em;
+                    flex-shrink: 2;
+                    top: 20px;
+                    color: transparent;
+                    text-decoration-line: underline;
+                    text-decoration-color: rgba(252, 250, 250, 0.2);
+                    text-decoration-style: wavy;}
+
+.hero-content p{opacity: 0.6;
+                margin-top: 25%;
+                flex-shrink: 2;
+                font-size: 1.3em;}
+                                                                /*resume button*/
+.hero-content a.btn{border: 1px solid rgb(101, 103, 104);
+                height: 13vh;
+                width: 15vw;
+                flex-grow: 0;
+                flex-shrink: 2;
+                display: flex;
+                justify-content: center;
+                font-size: 1.2rem;
+                font-weight: lighter;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 50px;
+                color: white;
+                margin-top:  20px;
+                margin-bottom: 5px;}
+
+.hero-content a.btn i.fa-download {margin: 0 1px 0 10px;
+                                    font-size: 0.8em;
+
+                                    background: none;
+                                    }
+.hero-content a.btn:hover{ transition: all 0.7s ease;
+                        background: rgba(100, 99, 99, 0.3);
+                        border: 1px solid rgba(100, 99, 99, 0.3);
+                        }
+                                                             /*VIDEO LANDEX*/
+
+.video-link {margin-bottom: 40px;
+            display: flex;
+            }
+
+.video-link .wave-btn {display: flex;
+                justify-content: center;
+                opacity: 1;
+                align-items: center;
+                margin-top: -10vh;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                background: none;
+                }
+
+    .video-link .fa{
+                    background: #404253;
+                    height: 100px;
+                    border: 1px solid rgba(250, 247, 247, 0);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0.6;
+                    border-radius: 50%;
+                    width: 100px;
+                    transition: all 1 ease-in-out;
+                    animation: wave 2s infinite 2s;}
+   
+
+
+    @keyframes wave {
+                    100% {opacity: 0.6;
+                    border:  20px solid rgba(221, 217, 217, 0.5);
+                    
+                        }
+                    50%{opacity: 0.6;
+                        border: 10px solid white;}
+
+                    0% {opacity: 0.6;
+                        background: #3e3f46;
+                        border: 1px solid #808081;
+                    
+                        
+                        }
+                    
+                    }
+    
+.video-link a {
+                text-decoration: none;
+                opacity: 0.6;
+                color: #fff;}
+
+     
+.video-link .fa-play{color: white;
+                    font-size: 1.2em;
+                    opacity: 0.6;}
+
+.video-link { display: flex;
+            margin-top: 50px;
+            justify-content: flex-start;
+            align-items: center;}
+
+.video-link .video-text{opacity: 0.6;
+                        color: white;
+                        margin-left: 20px;
+                        font-size: larger;}
+
+                        /* end  of video items*/
+
+.hell-content { flex-grow: 1;
+                flex-shrink: 6;                         /*sub container2, it's gonna be both flex container and item*/
+                display: flex;
+                flex-wrap: nowrap;
+                height: 100%;
+                background: #2a2c39;
+                justify-content: center;
+                                 
+            }
+.image12 {display: flex;        /*IMAGEEEEEEEEEEEEEE LANDEX*/
+        flex-grow: 1;
+        flex-shrink: 5; 
+        background: #2a2c39;
+        width: 50%;
+        box-sizing: border-box;                                /*sub-sub container2*/
+        height: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+            } 
+
+.img-landex{flex-grow: 1;
+            display: flex;
+            flex-shrink: 5;
+            max-width: 40vw !important;}
+
+.social-link1 {display: none;}                  /*::::::::::;  .Social MEDIAS-linksssssssssssssss-big*/
+
+.social-link-big {display: flex;
+                width: 40%;
+                position: relative;
+                left: 0;
+                flex-shrink: 6;
+                height: 100%;
+                background: #2a2c39;
+                display: flex;
+                }
+
+.social-link-big a{text-decoration: none;
+                    position: absolute;
+                    flex-shrink: 5;}
+
+.social-link-big .fa{font-size: 1.1em;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                position: absolute;
+                width: 60px;
+                flex: 1 4 60px;
+                border-radius: 50%;
+                transition: 0.5s ease-in-out;
+                border: 1px solid white;}
+
+.social-link-big .fa:hover{background: white;
+                        color: #2a2c39;}
+                       
+                
+
+ .social-link-big  .fa-facebook {left: -14vw;
+                                top: 9vh;}
+
+
+ .social-link-big .fa-dribbble {left: -3vw;
+                                top: 20vh;}              /* POSITION OF THE SOCIAL MEDIA LINKS*/
+
+ .social-link-big .fa-behance {left: 3vw;
+                                top: 43vh;
+                                }
+
+ .social-link-big .fa-linkedin {left: 2vw;
+                                top: 70vh;
+                                }
+
+                                          /*SCROLL UP BUTTON::::::::::::::::*/
+ 
+.scroll-up{background: none;
+            width: auto;
+            height: auto;
+            position: fixed; 
+            background: none;
+            display: flex;
+            z-index: 200;
+            align-items: center;
+            justify-content: flex-end;
+            right: 20px;
+            bottom: 2px;
+            }
+.scroll-up a{float: right;
+            height: 50px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            position: sticky;
+            z-index: 1000;
+            background: #2a2c39;
+            border: 1px solid rgba(250, 247, 247, 0.3);
+            border-radius: 50%;}
+
+.scroll-up a:hover{box-shadow: 3px 5px #98b91e;
+                }
+
+.scroll-up .fa-angle-up{color: white;
+                        font-size: 1.2em;}
+
+
+/* NOW AM GONNA DEAL WITH ;;;;;;;;;;;;;;SERVICE'''''''''''''''''' SECTION..............MY SERVICESSSSSS*/
+
+.service-display-section{
+                        margin-top: -10vh;
+                        width: 100vw;
+                        background: #30313d;
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;}
+
+.container-fluid{
+            width: 100%;
+            background: #30313d;
+            position: relative;
+            margin: 0;
+            }
+
+.section-cont {
+    margin-top: -100px;
+    position: absolute;
+    display: flex;
+    background: #30313d;
+    z-index: 22;
+    flex-direction: column;
+    width: 100%;
+                }
+
+.section-content{width: 90%;
+                margin: 4% 5% 1% 7%;
+                background: none;
+                height: auto;}
+
+.section-tag {font-size: 1.3em;
+            background: none;
+            opacity: 0.5;}
+
+.section-title {font-size: 4em;
+                background: none;
+                margin-top: 50px;}
+
+.swiper-wrapper{display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 130vh;
+                background: #30313d;
+                width: 100vw;}
+  
+    /*::::::::::::::::::::::CONTINUE WITH SERVICE ICONS:::THREE BLACK BOXES:::::::::::::::::::::::::*/
+
+.swiper-wrapper .service-box-single-item{
+                                        display: flex;
+                                        padding-top: 12% ;
+                                        background: #2a2c39;
+                                        height: 70%;
+                                        margin-right: 4%;
+                                        width: 25%;
+                                        flex-direction: column;}
+
+/*JUST THE PICTURES DOWN TO LOOK NOT FULL BLACK BACKGROUND::::::*/
+
+.swiper-wrapper .service-box-single-item ul .fa{margin-right: 15px;}
+
+.swiper-wrapper .service-box-single-item .icon{flex: 1 1;
+                                             opacity: 0.7;
+                                            margin-left: 15%;
+                                            margin-top: 20%;}
+                                            
+.swiper-wrapper .service-box-single-item ul{flex: 3 3;
+                                    opacity: 0.4;
+                                    list-style-type: none;
+                                    margin-top: -20%;
+                                    margin-left: 0%;
+                                    
+                                    }
+.swiper-wrapper .service-box-single-item ul li{font-size: 1.3em;
+                                                flex: 1 1;
+                                                padding: 5px;}
+                                                
+.swiper-wrapper .service-box-single-item h4{flex: 1 1 auto;}
+
+.swiper-wrapper .service-box-single-item h4 a{
+                            font-size: 2em;
+                            text-decoration: none;
+                            color: white;
+                            margin-left: 15%;
+                            }
+
+
+/*:::::::::::::::::::::::::::-- ...::: Start Skill Display Section :::... */ 
+
+.skill-display-section{height: 100vh;
+                        width: 100vw;
+                        background: #2a2c39;
+                        margin: 100px 0 100px 0;}
+
+.skill-display-section .align-items-center{background: #2a2c39;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-grow: 1;
+                                        padding: 0 10% 0 7%;
+                                        flex-shrink: 1;
+
+                                        }
+.skill-display-section .align-items-center .col-xl-6{background:  none;
+                                                   }
+.skill-display-section .align-items-center .offset-xxl-1{margin-left: -5%;}
+
+.skill-display-section .align-items-center .col-xxl-5 .section-content{
+                                                                background: none;
+                                                                flex-shrink: 5;
+                                                                }
+.skill-display-section .align-items-center .col-xxl-5 .section-content #btnk{flex-shrink: 5;
+                                                                            display: flex;
+                                                                            flex-direction: column;}
+                                                                            
+.skill-display-section .align-items-center .col-xxl-5 .section-content #btnk h2{flex-shrink: 7;}
+
+                                            /* HERE COMES THE BOXES THAT HAVE SKILLED WHITE LINES:::::::::::::::::*/
+
+ .skill-display-section .align-items-center .offset-xxl-1 .skill-display-wrapper{margin: 0;
+                                                                                background: none;
+                                                                                display: flex;
+                                                                                height: 100vh;
+                                                                                width: 50vw;
+                                                                                flex-direction: column;
+                                                                                align-items: flex-start;
+                                                                                justify-content: space-between;}
+                            
+ .skill-display-section .align-items-center .offset-xxl-1 .skill-display-wrapper .skill-progress-single-item{
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                justify-content: space-between;
+                                                                                flex-direction: column;
+                                                                                height: 22%;
+                                                                                padding-left: 4%;
+                                                                                background: #30313d;
+                                                                                width: 75%;
+                                                                                }
+
+ .skill-display-section .align-items-center .offset-xxl-1 .skill-box{color: white;
+                                                                    margin-right: 5%;
+                                                                    margin-bottom: 5%;
+                                                                    width: 95%;
+                                                                    flex-shrink: 1;
+                                                                    position: relative;
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                     background: linear-gradient(45deg, rgba(0, 0, 0, .2)50%, rgba(25, 223, 196, 0.3)0%);}
+.progress-line{background: white;
+                height: 7px;
+                border-radius: 4px;
+                flex-shrink: 1;
+                width: 90%;
+                box-shadow: 0 0 .1px .1px hsla(180, 100%, 50%, 0.5), .1px .1px 0 0 rgba(00, 00, 00, 0.22);}   
+
+.skill-display-section .align-items-center .offset-xxl-1 .skill-percentage{background: none;
+                                                                            opacity: 0.6;
+                                                                            position: absolute;
+                                                                            margin-top: -6%;
+                                                                            left: 30%;
+                                                                            font-size: 1.2em;}
+
+                                                                            
+ .skill-display-section .align-items-center .offset-xxl-1 .tag{background: none;
+                                                                margin-left: -70%;
+                                                                margin-top: 7%;
+                                                                opacity: 0.6;
+                                                                font-size: 1.2em;              
+                                                                }
+/* HERE DOWN AM GONNA BE SETTING THE BUTTON  OF DOWNLOADSS::::::::::::::::::*/
+
+#btnk{margin-left: 0 !important;}
+#btnk .btn {
+    border: 1px solid rgb(101, 103, 104);
+    height: 90px;
+    width: 250px;
+    flex-grow: 0;
+    flex-shrink: 2;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 5px;
+
+}
+
+ #btnk a.btn i.fa-download {
+    margin: 0 1px 0 10px;
+    font-size: 0.8em;
+    background: none;
+}
+
+#btnk a.btn:hover {
+    transition: all 0.7s ease-in-out;
+    background: rgba(100, 99, 99, 0.3);
+    border: 1px solid rgba(100, 99, 99, 0.3);               /*End of skilled items*/
+}
+
+
+/*COUNTER SINGLE ITEMSSS::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.counter-display-section{width: 100vw;
+                         display: flex;
+                        height: 50vh;
+                        background: #30313d;}
+
+.counter-display-wrapper{display: flex;
+                        width: 100%;
+                        margin-left: 10%;
+                        height: 100%;
+                        background: none;}
+
+.counter-display-section .container{display: flex;
+            width: 100%;
+            height: 100%;
+            background: none;}
+
+.counter-display-section .align-items-center{display: flex;
+                     width: 100%;
+                     justify-content: space-between;
+                     height: 100%;
+                    flex-direction: row;}
+                    
+.align-items-center .col-xxl-5{display: flex;
+                        flex-direction: column;
+                        flex:  1 1 50%;}
+
+.align-items-center .col-xxl-6 {
+                    flex: 2 2 50%;
+                    display: flex;
+                    flex-direction: column;}
+
+.justify-content-sm-start {
+                display: flex;
+                background: none;
+                height: 100%;
+                justify-content: center;
+                width: 100%;}
+
+.d-md-flex{flex: 1 1 30%;
+        background: none;}
+
+.counterup-single-item{background: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 100%;}
+            
+.counterup-single-item .icon{ background: none;
+                            margin-right: 20px;}
+
+.content{display: flex;
+        padding: 20px;
+        flex-direction: column;
+        background: none;
+        flex: 2 2 60%;}
+
+.content .text{opacity: 0.5;
+                background: none;
+                color: white;
+                font-size: 1.3em;
+            }
+
+        
+.content .number .counter, .content .number {font-size: 1.8em;
+                                    background: none;
+                                    font-weight: lighter;
+                                    color: white;
+                                         }
+
+.counterup-single-item .icon{
+        display: flex;
+        flex: 1 1 50px;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        border-radius: 20%;
+        border: 1px solid rgb(121, 119, 119);}
+
+/* AM GONNA BE FIGURING OUT THE MY COMPLETE PROJECTS::::::::::::::::::::::: */
+
+/*my buttonssssssssssssssssssssssssssss*/
+
+.project-display-section .default-nav-style{display: flex;
+                                            background: #3a3b44;
+                                            align-items: center;
+                                            margin-right: 0;}
+
+.project-display-section .default-nav-style .slider-button  .fa {border: 1px solid rgb(121, 119, 119);
+                                        opacity: 0.5;
+                                        margin-right: 30%;
+                                        color: white;
+                                        height: 85px;
+                                        font-size: 1em;
+                                        display: flex;
+                                        background: #3a3b44;
+                                        flex-basis: 80px 1 1;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 85px;
+                                        border-radius: 50%;
+                                        }
+
+.default-nav-style .slider-button .fa:hover{background: white;
+                                        color: black;
+                                        transition: 0.5s ease;
+                                        opacity: 1;
+                                        border: 1px solid black;}
+
+
+    /* HERE  DOWN COMES  THE TASK OF THE PICTURES:: PROJECCT BOX::::::::::::::*/
+
+.project-display-section{ background: #3a3b44;
+                        margin-left: -1vw;
+                        height: 130vh;
+                        width: 100vw;}
+
+.project-display-section .project-display-box{display: flex;
+                                            flex: 1 1 auto;
+                                            height: 100%;
+                                            z-index: 2;
+                                            margin: 0 8% 0 3%;
+                                            flex-direction: column; /* this is their box for flexibility*/
+                                             background: #3a3b44;}
+
+                            /* then comes the first small box that contains the  """""""MY OWESOME PROJECTS" """""""""""""""*/
+
+.project-display-section .project-display-box .justify-content-between{display: flex;
+                                                                    margin-top: 0;
+                                                                    width: auto;
+                                                                    height: 25%;
+                                                                    justify-content: center;
+                                                                    background: #3a3b44;}
+
+.project-display-section .project-display-box .justify-content-between .section-content, .section-title, .section-tag {background: #3a3b44;}   
+
+                              /*now am gonna take care of the big box with photoes*/
+
+.project-display-section .project-display-box .swiper-wrapper{display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: flex-start;
+                                                            width: 150vw;
+                                                            overflow: hidden;
+                                                            background: #3a3b44;
+                                                            height: 75%;
+                                                            background: none;
+                                                            }
+
+.project-display-section .project-display-box .swiper-wrapper .project-box-single-item  {
+                                                                                display: flex;
+                                                                                width:  50vw;
+                                                                                height: 100%;
+                                                                                background: #3a3b44;
+                                                                                position: relative;
+                                                                                margin: 0;
+                                                                                flex-direction: column;
+                                                                                justify-content: center;
+                                                                                 }
+
+ .project-display-section .project-display-box .swiper-wrapper .project-box-single-item .img-box {
+                                                                                height: 60%;
+                                                                                position: absolute;
+                                                                                background: #3a3b44;
+                                                                                width: 50vw;
+                                                                                position: relative;
+                                                                            } 
+ .project-display-section  .img-box  .bg-image{position: absolute;
+                                                height: 100%;
+                                                margin-left: 7%;
+                                                background: rgba(35, 35, 36, 0.8);
+                                                width: 45vw;                                  /*image parent*/
+                                                 }
+
+.project-display-section  .img-box  .bg-image img{max-width: 50vw;
+                                                margin: 10% 0 0 15%;                        /*Original image*/
+                                                max-height: 140%}
+
+ .project-display-section  .img-box  .image {margin: 0% 0 0 18%;
+                                            height: 100%;
+                                            background: #3a3b44;
+                                            width: 100%;   
+                                        } 
+
+.project-display-section  .img-box  .image img{max-width: 40%;                          /*Original image*/
+                                                max-height: 50%;
+                                                opacity: 0.1;
+                                                margin-left: 100%;
+                                                margin-right: 100%;
+                                                transform: skew(50deg, 0deg);                   /*image parent*/
+                                                -ms-transform: skew(50deg, 0deg);
+                                                -webkit-transform: skew(50deg, 0deg);}   
+                                                
+/*PROJECT BOXES WITH CONTENTS WORDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.project-display-section .project-display-box .swiper-wrapper .project-box-single-item .content{background: #3a3b44;
+                                                                                                display: flex;
+                                                                                                position: absolute;
+                                                                                                z-index: 30;
+                                                                                                flex-grow: 1;
+                                                                                                flex-shrink: 1;
+                                                                                                flex-direction: column;
+                                                                                                align-items: flex-start;
+                                                                                                margin: -5% 0 0 0;
+                                                                                                width: 100%;
+                                                                                                padding-left: 10%;
+                                                                                                height: 30%;
+                                                                                                }
+ .project-box-single-item .content h4{ background: none;}
+ .project-box-single-item .content h4 a {
+                                color: white;
+                                font-size: 1.5em;
+                                background: none;
+                                text-decoration: none;
+                                }
+ .project-box-single-item .content .catagory-nav-item{display: flex;
+                                             flex-direction: row;
+                                             background: #3a3b44;
+                                             flex-grow: 1;
+                                             flex-shrink: 1;
+                                             margin-left: -7%;
+                                             padding-left:  7%;
+                                            }
+
+ .project-box-single-item .content .catagory-nav-item > li{background: #3a3b44;
+                                                            list-style-type: none;}
+ 
+.project-box-single-item .content .catagory-nav-item > li > a {opacity: 0.5;
+                                                                color: white;
+                                                                font-size: 1em;
+                                                                background: #3a3b44;
+                                                                font-family: sans-serif;
+                                                                text-decoration: none;}
+
+.project-box-single-item .content .catagory-nav-item > li a:hover{color: white;
+                                                                opacity: 1;}
+
+/*
+///////////////////////////////////////////////////////// TESTMONIAL SECTION HERE DOWN::::::::::::::::::::::::: */
+
+
+.testimonial-display-section{background: #2a2c39;
+                            margin-top: 0;
+                            margin-left: -1vw;
+                            position: relative;
+                            z-index: 50;
+                            height: 110vh;
+                            width: 100vw;}
+
+.testimonial-display-box{display: flex;                 /*THIS BOX CONTAINS BOTH CONTAINER AND THE BUTTONS*/
+                        flex-direction: column;}
+.testimonial-display-section .container{margin: 0;
+                                        display: flex;
+                                        flex: 5 5 auto;
+                                        flex-shrink: 1;
+                                        flex-grow: 1;
+                                        flex-direction: column;
+                                        padding: 5%;
+                                        padding-left: 10%;
+                                        background: #2a2c39;
+                                        height: 110vh;
+                                        width: 90vw; }
+
+.testimonial-display-section .container .d-xl-flex{flex: 1 3 50%;
+                                            margin-right: 0;
+                                            margin-left: 45%;
+                                            height: 20%;
+                                             background: #2a2c39;}
+
+.testimonial-display-section .container .d-xl-flex .section-content{background: #2a2c39;}
+
+ .testimonial-display-section .section-tag{background: #2a2c39;
+                                            flex-shrink: 1;}
+
+.testimonial-display-section .section-title{background: #2a2c39;
+                                            margin-top: 1%;
+                                            flex-shrink: 3;}
+
+
+
+/*...............................LOLEM IPUSM SECTIONNNN :::::::::::::::::::::::::::::::::::::::::::*/
+
+.testimonial-display-section .container .testimonial-display-wrapper .swiper-wrapper  {display: flex;
+                                                                                        background: #2a2c39;
+                                                                                        flex-direction: row;
+                                                                                        flex-shrink: 4;
+                                                                                        justify-content: space-between;
+                                                                                        height: 100%;
+                                                                                        width: 90%;}        
+
+.testimonial-display-section .swiper-wrapper .content{background: #3a3b44;
+                                   width: 35vw;
+                                   height: 60vh;
+                                   margin-right: 10vw;
+                                   margin-left: -5%;
+                                    display: flex;
+                                    flex-shrink: 5;
+                                    justify-content: space-between;
+                                    flex-direction: column;
+                                    }
+.testimonial-slider-single-item:first-child .content{margin-top: -30vh;   /*THIS IS THE CONTENT THAT IS UPWARDS ON MARGIN OF TESTMONIAL;;;;;;;;;;;;;;;;;;;;;;*/
+                                            height: 80vh;
+                                            flex-shrink: 6;}
+ .testimonial-display-section .swiper-wrapper .content span.icon{height: 10%;
+                                                                color: white;
+                                                                opacity: 0.5;
+                                                                margin-top: -10vh;
+                                                                flex-shrink: 5;
+                                                                margin-bottom: 10%;
+                                                                font-size: 8em;
+                                                                background: none;}
+
+ .testimonial-display-section .swiper-wrapper .content p{height: 40vh;
+                                                            font-size: 1.7em;
+                                                            font-weight: bolder;
+                                                            margin-left: 5%;
+                                                            width: 70%;
+                                                            display: flex;  
+                                                            flex-shrink: 5;
+                                                            flex-grow: 1;
+                                                            color: white;
+                                                            opacity: 1;
+                                                            font-family: sans-serif;}
+
+ .testimonial-display-section .swiper-wrapper .content .info{display: flex;
+                                                            height: 30%;
+                                                            margin-left: 5%;
+                                                            background: none;
+                                                            justify-content: space-between;}
+
+.testimonial-display-section .swiper-wrapper .content .info .author{margin-top: -2%;
+                                                                    background: none;
+                                                                }
+ .testimonial-display-section .swiper-wrapper .content .info .author h4.name{ background: none;
+                                                                            font-size: 1.8em;
+                                                                            margin-top: -2%;
+                                                                            color: white;
+                                                                            font-weight: bolder;}
+
+.testimonial-display-section .swiper-wrapper .content .info .author span.designation{font-size: 1.2em;
+                                                                                    font-weight: lighter;
+                                                                                    color: white;
+                                                                                    opacity: 0.5;
+                                                                                    background: none;
+                                                                                }
+
+.testimonial-display-section .swiper-wrapper .content .info .review{display: flex;
+                                                                    background: none;
+                                                                    margin-right: 5%;}
+
+.testimonial-display-section .swiper-wrapper .content .info .review li{margin-left: 5%;
+                                                                        list-style: none;
+                                                                    background: none;}
+
+.testimonial-display-section .swiper-wrapper .content .info .review .fill .fa-star{color: rgb(250, 214, 9);
+                                                                                    font-size: auto;
+                                                                                background: none;}
+
+.testimonial-display-section .swiper-wrapper .content .info .review .blank .fa-star{color: #5e606d;
+                                                                                    background: none;
+                                                                                    font-size: auto;}
+
+/* BUTTONS THAT MUST BE AT THE BOTTOM OF THE CONTAINER OF TESTMONIAL:::::::::::::::::::::::::::::::::::::::::::*/
+
+
+.testimonial-display-box .default-nav-style{margin-bottom: auto;
+                                            margin: -20vh auto auto 30vw;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background: #2a2c39;
+                                            flex: 1 5 auto;}
+.testimonial-display-box .default-nav-style .slider-button{background: none;}
+
+.testimonial-display-box .default-nav-style .slider-button .fa {
+                                                                border: 1px solid rgb(121, 119, 119);
+                                                                opacity: 0.5;
+                                                                color: white;
+                                                                height: 80px;
+                                                                font-size: 1em;
+                                                                display: flex;
+                                                                background: #2a2c39;
+                                                                flex-basis: 80px 1 1;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                width: 80px;
+                                                                border-radius: 50%;
+                                                                }
+
+
+.testimonial-display-box .default-nav-style .slider-button .fa:hover{background: white;
+                                                                    color: black;
+                                                                    transition:  0.5s ease-in-out;
+                                                                    opacity: 1;
+                                                                    border: 1px solid black;}
+
+/*END TO TESTIMONIAL SECTION ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+/*..........................................COMPANIES LOGO SECTION HERE DOWN;;;;;;;;;;;;;;;;;;;;;;;;;;*/
+
+.company-logo-display{width: 110vw;
+                     height: 100vh;
+                     margin-top: 15vh;
+                    background: #3a3b44;
+                    position: relative;}
+
+.company-logo-display-box{width: 100%;
+                        background: #3a3b44;
+                        display: flex;
+                        padding-top: 10%;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;}
+
+ .company-logo-display .container{display: flex;
+                                width: 90%;
+                                height: 90%;
+                                flex-direction: column;
+                                background: #3a3b44; }
+
+  .company-logo-display .container .section-content{background: #3a3b44;
+                                                     margin: 0 0 0 -3% ;
+                                                    padding-left: 6%;}                              
+ .company-logo-display .container .section-content .section-title{background:none;
+                                                                margin-top: 1%;}
+
+ .company-logo-display .container .section-content .section-tag{background: none;}
+
+/*.................am gonna deal with images using flex and row direction after giving borders to them*/
+
+.company-logo-display .container .company-logo-display-wrapper{background: #3a3b44;
+                                                                height: auto;
+                                                                width: 100%;}
+.company-logo-display-wrapper .swiper-wrapper{display: flex;
+                                            background: #3a3b44;
+                                            justify-content: center;
+                                            margin: 0 0 0 -5% ;
+                                            }
+ .company-logo-display-wrapper .swiper-wrapper .company-logo-single-item{background: #3a3b44;
+                                                                        height: 35vh;
+                                                                        margin: 2% 3% 2% 3%; 
+                                                                        position: relative;
+                                                                        width: 16vw;}
+
+ .company-logo-display-wrapper .swiper-wrapper .company-logo-single-item a{margin: 0;
+                                                                            border: 1px solid rgb(121, 119, 119);
+                                                                            width: 100%;
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            background: #2a2c39;
+                                                                            position: absolute;
+                                                                            height: 100%;
+                                                                            opacity: 0.2;
+                                                                            }
+.company-logo-display-wrapper .swiper-wrapper .company-logo-single-item a:hover img{opacity: 0.6;}
+.company-logo-display-wrapper .swiper-wrapper .company-logo-single-item a:hover{opacity: 0.9;
+                                                                                background: #2a2c39;
+                                                                                transition: all 0.5s ease-in-out ;
+                                                                                border: none;}
+
+
+/*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,END OF COMPANIESSSSSS LOGO*/
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::START OF BOLOG-FEED-SECTION DOWN:::::::::::::::::::::::::::::*/
+
+
+
+.blog-feed-display-section{background: #3a3b44;
+                            height: 110vh;
+                            box-sizing: border-box;
+                            padding-top: 5vh;
+                            margin-left: 0;
+                            width: 110vw}
+
+.blog-feed-display-box{background: #3a3b44;
+                        width: 90%;
+                        height: 90%;}
+
+ .blog-feed-display-section .container{display: flex;
+                                    width: 100vw;
+                                    background: #3a3b44; 
+                                    flex-direction: column;}
+
+.blog-feed-display-section .container .section-content{display: flex;
+                                                    background: #3a3b44;
+                                                    flex-direction: column;
+                                                    width: 90%;
+                                                    flex: 1 2 20%;
+                                                    position: relative;
+                                                    justify-content: center;
+                                                    align-items: center;}
+
+.blog-feed-display-section .section-content .section-tag{margin-left: -5%;}
+
+ .blog-feed-display-section .container .section-content .section-title{margin-top: 0;
+}
+
+ .blog-feed-display-section .container .blog-feed-display-wrapper{background: #3a443b;
+                                                                width: 100%;}
+                                                                
+.blog-feed-display-section .container .blog-feed-display-wrapper .col-12{background: none;}
+
+.blog-feed-display-section .container .blog-feed-display-wrapper .row{display: flex;
+                                                                    position: relative;
+                                                                    z-index: 30;
+                                                                    flex-direction: column;
+                                                                    width: 100vw;
+                                                                    height: auto;
+                                                                    margin-left: -1%;
+                                                                    background: #3a3b44;}
+
+.blog-feed-display-section .container .blog-feed-display-wrapper .row .blog-feed-single-item{
+                                                                                flex: 1 1 70%;
+                                                                                height: 40vh;
+                                                                                margin: 0 7% 5% 7%;
+                                                                                background: #2a2c39;
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                padding: 0 5% 0 5%;
+                                                                                }
+ .blog-feed-display-section .container .blog-feed-display-wrapper .row .blog-feed-single-item a{margin-right: 5%;}
+ 
+
+ .blog-feed-display-section .container .blog-feed-display-wrapper .row .blog-feed-single-item .content-box{display: flex;
+                                                                                                        flex-direction: row;
+                                                                                                        flex-shrink: 5;
+                                                                                                        height: 100%;}
+
+ .blog-feed-single-item .content{display: flex;
+                                flex-direction: column;
+                                flex: 5 1 70%;}
+
+.blog-feed-single-item .content .post-meta a{font-size: 1.2em;
+                                            color: white;
+                                            text-decoration: none;}
+
+ .blog-feed-single-item .content .post-meta a:first-child::after{ content: "-";             /* THIS SING " - " AFTER BUSNESS WORD*/
+                                                                margin-left: 2%;
+                                                                font-weight: bolder;
+                                                                font-size: 1.2em;
+                                                                color: white;}
+
+.blog-feed-single-item .content .post-meta a:last-child{opacity: 0.5;}
+
+.blog-feed-single-item .content .post-meta a:last-child:hover{opacity: 1;
+                                                            transition: all 0.5s ease-in;}
+.blog-feed-single-item .content h4{display: flex;
+                                    width: 80%;}
+.blog-feed-single-item .content h4 a{text-decoration: none;
+                                    flex-shrink: 1;
+                                    font-size: 1.5em;}
+
+
+  .blog-feed-single-item .content-box a.btn{ text-decoration: none;            /*THIS IS THE BUTTON IN THE BLOG-FEED*/
+                                                    font-size: 1.2em;
+                                                    border: 1px solid rgb(101, 103, 104);
+                                                    height: 60px;
+                                                    display: flex;
+                                                    margin-top: 9%;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border-radius: 40px;
+                                                    flex: 1 1 200px;
+                                                    opacity: 0.9;
+                                                  } 
+
+  .blog-feed-single-item .content-box a.btn:hover{transition: all 0.7s ease;
+                                                background: rgba(100, 99, 99, 0.3);
+                                                border: 1px solid rgba(100, 99, 99, 0.3);
+                                                }           
+
+/* END OF BLOG-------FEED*/
+
+/*:::::::::::::::::::::::::::::::::::::::FOOTER SECTION HERE DOWN:::::::::::::::::::::::::::::*/
+footer.footer-section{width: 110vw;
+                margin-top: 80vh;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background: #2a2c39;}
+
+.footer-section-top{background: #2a2c39;
+                    }
+.footer-section-top .container{display: flex;
+                        flex-direction: column;}
+.footer-section-top .container .section-content{display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                width: 70%;
+                                                background: #2a2c39;
+                                                justify-content: center;}
+
+.footer-section-top .container .section-content .section-tag{background: #2a2c39;}
+.footer-section-top .container .section-content .section-title{background: #2a2c39;
+                                                                margin-top: 2%;}
+
+   .footer-section-top .container .footer-newsletter {display: flex;
+                                                     justify-content: center;
+                                                     background: #2a2c39;
+                                                     width: 80%;
+                                                     align-items: center;}  
+                                                     
+ .footer-section-top .container .footer-newsletter input{width: 50%;
+                                                        display: flex;
+                                                        height: 9vh;
+                                                        font-size: 1.2em;
+                                                        margin-right: 3%;
+                                                        border: 1px solid rgba(100, 99, 99, 0.3);
+                                                        border-radius: 90px;}
+
+.footer-section-top .container .footer-newsletter button{font-size: 1.2em;
+                                                    border: none;
+                                                    height: 9vh;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background: rgba(100, 99, 99, 0.2);
+                                                    border-radius: 40px;
+                                                    width: 15%;}
+
+ .footer-section-top .container .footer-newsletter button:hover{border: 1px solid white;
+                                                                transition: all 0.7s ease;}
+                                                                
+
+.footer-center{width: 100vw;
+                background: #2a2c39;}
+
+.footer-center .row{display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10vh;
+                    width: 100%;
+                    background: #2a2c39;}
+
+.footer-single-info{margin: 5%;         /*to be corrected tomorrow: GOD HELP ME TO GET UP ALIVE AND AM GONNA MAKE IT TO MORROW*/
+                    width: 30vw;
+                    flex: 1 1 calc(100% - 5%);}
+
+.footer-single-info a{display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2em;
+                    color: white;
+                    width: 90%;
+                    margin-right: 6%;
+                    text-decoration: none;}
+.footer-single-info a  .text{margin-right: 5%;} 
+.footer-single-info a  .icon  {margin-right: 5%;}             
+.footer-single-info .fa{height: 90px;
+                        width: 90px;
+                        border-radius: 50%;
+                        background: #2a2c39;
+                        border: 1px solid rgba(100, 99, 99, 0.3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        }
+
+                        /*..........this social links here must be smaller than the others*/
+
+ .footer-single-info .social-link{display: flex;
+                                    width: 100%;
+                                    flex-direction: row;}
+
+ .footer-single-info .social-link .fa{height: 60px;
+                                    width: 60px;
+                                    font-size: .5em;
+                                    margin: 5%;
+                                    border-radius: 50%;}
+
+ .footer-single-info  a:hover .fa{background: white;
+                            transition: all 0.5s ease-in-out;
+                            color: #2a2c39;}
+
+ .footer-single-info li{list-style: none;
+                        }
+
+                 /*::::::::::::::::::::::::FOOTER BOTTOM HERE DOWN..........................................*/
+
+ .footer-bottom{width: 100vw;
+                height: auto;
+                margin-top: 5vh;
+                background: #2a2c39;}
+
+.footer-bottom hr{ border:1px solid rgba(100, 99, 99, 0.3);
+                margin-top: 0;}
+
+.footer-bottom .row{width: 85%;
+                    height: auto;
+                    margin: 2% 8% 0 6%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;}
+
+.footer-bottom p{color: rgba(235, 227, 227, 0.5);
+                font-size: 1.2em;}
+
+.footer-bottom .footer-copyright .copyright-text a{text-decoration: none;
+                                                    color: white;}
+
+.footer-bottom .footer-copyright .copyright-text i.fa{color: white;}
+
+
+ }/*END OF MEDIA OF 1000PX*/
+ 
+

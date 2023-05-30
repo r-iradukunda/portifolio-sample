@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>ubufindooooo</title>
+    <style>
+       body{margin: 0;
+             padding: 0;
+             background: #333;
+                }
+        .wrapper-kress{
+                margin: 3px;
+                padding: 1px;
+            }
+        .container{ display: flex;
+                height:  650px;
+             align-items: flex-end;
+            
+            }
+
+        .box1{background: red;
+                
+                align-self: flex-start;
+                flex-shrink: 1;}
+        .box2{background: green;
+                flex-shrink: 1;}
+        .box3{background: blue;
+        align-self: flex-start;}
+        .box4{background: rosybrown;}
+        .box5{background: orange;
+                flex-shrink: 1;
+            align-self: flex-start;}
+        .box6{background: purple;}
+        .box7{background: tomato;
+             flex-shrink: 2;}
+        .box8{background: yellow;
+            align-self: flex-start;}
+        .box9{background: grey;
+                flex-shrink: 3;}
+        .box10{background: darkslateblue;
+            flex-shrink: 1;
+        align-self: flex-start;}
+        
+
+        .items {text-align: center;
+            height: 500px;
+            flex-basis: 50px;
+        flex-grow: 1;}
+.container:hover, .box10, .box1, .box3, .box5, .box8, .box10{
+    border-radius: 0 0 50px 50px;
+    animation: blink 1s infinite;
+    transition-delay: 0.5s;
+    height: 200px;}
+
+
+@keyframes blink{
+    90%{background: white;}
+    80%{background: grey;}
+    30%{background: green;}
+    50%{background: blue;}
+    10%{background: yellow;}
+}
+.box7 a{font-size: 2em;
+    text-decoration: none;
+        animation: light 1.5s infinite;}
+        @keyframes light {
+            from{color: white;
+            text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #fff;}
+        to{color: indigo;
+        text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2;;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper-kress">
+        <div class="container">
+            <div class="items box1">box1</div>
+            <div class="items box2">box2</div>
+            <div class="items box3">box3</div>
+            <div class="items box4">box4</div>
+            <div class="items box5">box5</div>
+            <div class="items box6">box6</div>
+            <div class="items box7"><a href="index.html" style="text-align: center;">BACK <br>HOME</a></div>
+             <div class="items box8">box8</div>
+             <div class="items box9">box9</div>
+             <div class="items box10">box10</div>
+             <div class="items box7">box11</div>
+             <div class="items box1">box12</div>
+             <div class="items box6">box13</div>
+             <div class="items box10">box14</div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
